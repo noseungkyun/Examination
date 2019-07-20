@@ -94,6 +94,14 @@ name=Cloudera Manager
 baseurl=https://archive.cloudera.com/cm5/redhat/7/x86_64/cm/5.15.2/
 gpgkey =https://archive.cloudera.com/cm5/redhat/7/x86_64/cm/RPM-GPG-KEY-cloudera    
 gpgcheck = 1
+
+$ sudo yum install cloudera-manager-server cloudera-manager-daemons
+
+$ sudo /usr/share/cmf/schema/scm_prepare_database.sh mysql scm scm-user somepassword
+
+$ sudo systemctl start cloudera-scm-server
+
+$ sudo systemctl status cloudera-scm-server
 ```
 ![Alttext](/Part1/img/8_baseUrlSetup.PNG)
 
